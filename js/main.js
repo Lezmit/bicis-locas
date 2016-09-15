@@ -20,7 +20,7 @@ function validateForm(){
     var emailRegex=/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   cor = document.getElementById("input-email").value;
   if(!emailRegex.test(cor)) {
-      alert("Ingrese un correo válido.");
+    alert("Ingrese un correo válido.");
   };
     
   var contr = document.getElementById("input-password").value;
@@ -29,9 +29,9 @@ function validateForm(){
         return false; 
     }
     
-    var opcion = document.getElementById("checkbox").selectedIndex;
+    var opcion = document.getElementsByClassName("form-control").selectedIndex;
     if( opcion == null || opcion == "" ) {
-    alert("Por favor, seleccione una opción en checkbox.");
+        alert("Por favor, seleccione una opción en checkbox.");
     }
 
     return true;    
